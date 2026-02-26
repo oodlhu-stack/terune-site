@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>テルーン商事株式会社</title>
+  <meta name="description" content="テルーン商事株式会社の公式サイト。地域とともに、信頼ある商流をつくる。" />
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --card: #ffffff;
+      --text: #1d2433;
+      --muted: #5a6477;
+      --brand: #1356b8;
+      --brand-dark: #0e3f88;
+      --line: #dbe3f2;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 40%, #f8faff 100%);
+      line-height: 1.7;
+    }
+    .wrap { width: min(1080px, 92%); margin: 0 auto; }
+    header {
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(245,248,252,.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      z-index: 5;
+    }
+    .brand { font-weight: 700; letter-spacing: .04em; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+    .topbar { display: flex; align-items: center; justify-content: space-between; }
+    .hero {
+      padding: 72px 0 56px;
+      display: grid;
+      gap: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #e3eeff;
+      color: var(--brand-dark);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    h1 {
+      margin: 12px 0 0;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.25;
+    }
+    .lead { color: var(--muted); max-width: 64ch; }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+    section { padding: 24px 0 14px; }
+    .section-title { font-size: 26px; margin: 0 0 14px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(16, 42, 84, 0.05);
+    }
+    .card h3 { margin: 4px 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); }
+    .info {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { width: 180px; background: #f8fbff; font-weight: 600; }
+    .contact {
+      margin-top: 14px;
+      padding: 20px;
+      border-radius: var(--radius);
+      background: #0f2d63;
+      color: #fff;
+    }
+    .tel {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    footer {
+      margin-top: 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      padding: 20px 0 40px;
+    }
+    @media (max-width: 860px) {
+      .cards { grid-template-columns: 1fr; }
+      th { width: 120px; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div class="brand">テルーン商事株式会社</div>
+      <nav>
+        <a href="#business">事業内容</a>
+        <a href="#company">会社概要</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">TERUNE TRADING CO., LTD.</div>
+      <h1>地域とともに、<br>信頼ある商流をつくる。</h1>
+      <p class="lead">テルーン商事株式会社は、仕入れ・販売・物流をつなぐ商社機能を通じて、お客様の事業成長を支えます。スピードと誠実さを両立し、長く選ばれるパートナーを目指しています。</p>
+      <a class="cta" href="#contact">お問い合わせはこちら</a>
+    </section>
+
+    <section id="business">
+      <h2 class="section-title">事業内容</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>国内卸売・調達</h3>
+          <p class="muted">多様な仕入れネットワークを活用し、品質・納期・価格のバランスを意識した調達を行います。</p>
+        </article>
+        <article class="card">
+          <h3>法人向け販売支援</h3>
+          <p class="muted">ニーズに合わせた提案型営業で、企業間取引の効率化と安定供給をサポートします。</p>
+        </article>
+        <article class="card">
+          <h3>物流・在庫最適化</h3>
+          <p class="muted">受発注から配送までの業務フローを見直し、在庫負担と機会損失の最小化を支援します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="company">
+      <h2 class="section-title">会社概要</h2>
+      <div class="info">
+        <table>
+          <tr><th>会社名</th><td>テルーン商事株式会社</td></tr>
+          <tr><th>代表</th><td>（準備中）</td></tr>
+          <tr><th>所在地</th><td>（準備中）</td></tr>
+          <tr><th>事業内容</th><td>国内卸売、法人向け販売支援、物流・在庫最適化支援 ほか</td></tr>
+          <tr><th>設立</th><td>（準備中）</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">お問い合わせ</h2>
+      <div class="contact">
+        <p>ご相談・お見積りはお電話にてお気軽にご連絡ください。</p>
+        <a class="tel" href="tel:0227965293">022-796-5293</a>
+        <p style="margin-top:8px;font-size:13px;opacity:.9;">受付時間：平日 9:00〜18:00（仮）</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> テルーン商事株式会社. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
