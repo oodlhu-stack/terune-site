@@ -162,15 +162,40 @@
     }
 
     .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
+      position: relative;
+      background: linear-gradient(160deg, rgba(20, 37, 72, .68), rgba(31, 58, 112, .50));
+      border: 1px solid rgba(159, 188, 255, .36);
       border-radius: 18px;
       padding: 18px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 18px 38px rgba(10, 24, 52, .30);
+      backdrop-filter: blur(7px);
+      overflow: hidden;
+      color: #eef5ff;
     }
 
-    .hero-card h3 { margin: 2px 0 10px; font-size: 16px; }
-    .hero-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -25% 35% auto -25%;
+      height: 140px;
+      background: radial-gradient(circle, rgba(168, 204, 255, .34), transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-card h3 {
+      margin: 2px 0 10px;
+      font-size: 16px;
+      letter-spacing: .02em;
+      color: #ffffff;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #dce9ff;
+    }
+
+    .hero-card li { margin-bottom: 6px; }
 
     section { padding: 16px 0 12px; }
     .section-title { font-size: 28px; margin: 0 0 14px; letter-spacing: .01em; }
