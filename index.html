@@ -84,14 +84,35 @@
 
     .badge {
       display: inline-block;
-      border: 1px solid #cfe0ff;
-      color: #114aab;
-      background: #eaf2ff;
+      border: 1px solid rgba(170, 199, 255, .55);
+      color: #eaf2ff;
+      background: linear-gradient(135deg, rgba(22, 42, 86, .62), rgba(35, 72, 148, .52));
+      box-shadow: 0 10px 24px rgba(14, 34, 78, .28), inset 0 1px 0 rgba(255,255,255,.16);
+      backdrop-filter: blur(6px);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .07em;
       border-radius: 999px;
-      padding: 7px 12px;
+      padding: 8px 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -120%;
+      width: 55%;
+      height: 160%;
+      background: linear-gradient(110deg, transparent 15%, rgba(255,255,255,.45) 50%, transparent 85%);
+      transform: skewX(-18deg);
+      animation: badgeShine 4s ease-in-out infinite;
+    }
+
+    @keyframes badgeShine {
+      0%, 65% { left: -120%; }
+      100% { left: 160%; }
     }
 
     h1 {
@@ -99,6 +120,13 @@
       line-height: 1.18;
       font-size: clamp(34px, 5vw, 58px);
       letter-spacing: .01em;
+    }
+
+    .accent {
+      background: linear-gradient(135deg, #4da6ff, #8fd3ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .lead {
@@ -429,8 +457,8 @@
     <section class="hero">
       <div>
         <span class="badge">TR CO., LTD.</span>
-        <h1>地域とともに、<br>信頼ある商流をつくる。</h1>
-        <p class="lead">株式会社TRは、仕入れ・販売・物流をつなぐ商社機能を通じて、お客様の事業成長を支えます。スピードと誠実さを両立し、長く選ばれるパートナーを目指しています。</p>
+        <h1>地域とともに、<br><span class="accent">信頼ある商流</span>をつくる。</h1>
+        <p class="lead">株式会社TRは、仕入れ・販売・物流をつなぐ商社機能で、お客様の事業成長を支えます。スピードと誠実さを両立し、長く選ばれるパートナーを目指します。</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">お問い合わせはこちら</a>
           <a class="btn btn-secondary" href="#business">事業内容を見る</a>
