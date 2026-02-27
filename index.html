@@ -222,7 +222,24 @@
       border-radius: var(--radius);
       padding: 18px;
       box-shadow: var(--shadow);
-      transition: transform .2s ease, box-shadow .2s ease;
+      transition: transform .24s ease, box-shadow .24s ease;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: -130%;
+      width: 65%;
+      height: 130%;
+      background: linear-gradient(105deg, transparent 15%, rgba(255,255,255,.68) 50%, transparent 85%);
+      transform: skewX(-18deg);
+      transition: left .62s ease;
+      z-index: 2;
+      pointer-events: none;
     }
 
     #business .card {
@@ -233,6 +250,10 @@
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 18px 34px rgba(14, 40, 92, .14);
+    }
+
+    .card:hover::after {
+      left: 155%;
     }
 
     .icon {
